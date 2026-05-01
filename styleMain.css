@@ -1,0 +1,90 @@
+*{padding: 0;margin: 0; box-sizing: border-box; font-family: 'JetBrains Mono', monospace;}
+.navMenu {
+    border: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.titleNav{
+    margin: 0;
+    padding: 0;
+}
+
+.bodyNav{
+    margin: 0;
+    padding: 0;
+}
+
+.navBarHor{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+
+    border: black solid 1px;
+    background-color: #00ADB5;
+
+}
+
+.navBarHor li a{
+    padding: 25px 15px;
+    display: block;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    font-size: small;
+    color: #222831;
+}
+
+a:visited{
+    color: #222831;
+}
+
+.navBarHor li a:hover{
+    color: white;
+    background-color: black;
+    transition-duration: 0.5s;
+
+}
+
+.navBarHor li{
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.navBarHor li:nth-child(2){
+    border-left: black solid 1px;
+    border-right: black solid 1px;
+}
+
+.conteudo{
+    display: flex;
+    background-color: #393E46;
+    justify-content: left;
+    width: 33.33%;
+    height: 20vh;
+    transition-duration: 2s;
+}
+
+.introducao{
+    transition-duration: 2s;
+}
+
+.introducao h1{
+    color: #EEEEEE;
+    font-size: 2.25rem;
+    transition-duration: 2s;
+}
+
+.introducao p{
+    color: #EEEEEE;
+    transition-duration: 2s;
+    font-size: 1rem;
+}
+
+.pageBody{
+    background-color: #222831;
+}
