@@ -1,4 +1,10 @@
-*{padding: 0;margin: 0; box-sizing: border-box; font-family: 'JetBrains Mono', monospace;}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace;
+}
+
 .navMenu {
     border: none;
     display: flex;
@@ -6,30 +12,28 @@
     padding: 0;
 }
 
-.titleNav{
+.titleNav {
     margin: 0;
     padding: 0;
 }
 
-.bodyNav{
+.bodyNav {
     margin: 0;
     padding: 0;
 }
 
-.navBarHor{
+.navBarHor {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: space-between;
     width: 100vw;
-
     border: black solid 1px;
     background-color: #00ADB5;
-
 }
 
-.navBarHor li a{
+.navBarHor li a {
     padding: 25px 15px;
     display: block;
     text-decoration: none;
@@ -38,53 +42,235 @@
     color: #222831;
 }
 
-a:visited{
+a:visited {
     color: #222831;
 }
 
-.navBarHor li a:hover{
+.navBarHor li a:hover {
     color: white;
     background-color: black;
     transition-duration: 0.5s;
-
 }
 
-.navBarHor li{
+.navBarHor li {
     float: left;
     width: 33.33%;
     text-align: center;
 }
 
-.navBarHor li:nth-child(2){
+.navBarHor li:nth-child(2) {
     border-left: black solid 1px;
     border-right: black solid 1px;
 }
 
-.conteudo{
+.conteudo {
     display: flex;
     background-color: #393E46;
-    justify-content: left;
-    width: 33.33%;
-    height: 20vh;
-    transition-duration: 2s;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5.0rem;
+    padding-right: 3.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    position: relative;
+    transition-duration: 1.5s;
+    flex: 1;
 }
 
-.introducao{
-    transition-duration: 2s;
+.introducao {
+
 }
 
-.introducao h1{
+.introducao h1 {
+    color: #00ADB5;
+    font-size: clamp(2.5rem, 3.5vw, 4.4rem);
+    margin-bottom: 0.75rem;
+    line-height: 1;
+
+
+    opacity: 0;
+    animation: slideUpFull 0.8s ease-out 0.4s forwards;
+}
+
+.introducao p {
     color: #EEEEEE;
-    font-size: 2.25rem;
-    transition-duration: 2s;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    margin-bottom: 0.75rem;
+    line-height: 1;
+
+
+    opacity: 0;
+    animation: slideUp75 0.8s ease-out 0.6s forwards;
 }
 
-.introducao p{
-    color: #EEEEEE;
-    transition-duration: 2s;
-    font-size: 1rem;
-}
-
-.pageBody{
+.pageBody {
     background-color: #222831;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.btnGithub {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.65rem 0.75rem;
+    border-radius: 5px;
+    background-color: #00ADB5;
+    color: #222831;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    margin-right: 0.7rem;
+
+    opacity: 0;
+    animation: slideUpFull 0.8s ease-out 0.8s forwards;
+}
+
+.btnGithub:hover {
+    background-color: #00000F;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+.styling {
+    position: absolute;
+    right: 55.5rem;
+    top: 50%;
+    color: #222831;
+    line-height: 1;
+    transition-duration: 1.5s;
+
+
+    opacity: 0;
+    animation: fadeInCode 1s ease-out 1.2s forwards;
+}
+
+.welcome {
+    color: #00ADB5;
+    font-size: clamp(0.7rem, 1.3vw, 1.2rem);
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    opacity: 0;
+    animation: slideUpFull 0.8s ease-out 0.2s forwards;
+}
+
+.welcome::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 1px;
+    background-color: #00ADB5;
+    margin-right: 0.5rem;
+}
+
+.abrirProjetos{
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.65rem 0.75rem;
+    border-radius: 5px;
+    background-color: #00ADB5;
+    color: #222831;
+    text-decoration: none;
+    transition-duration: 0.7s;
+
+
+    opacity: 0;
+    animation: slideUpFull 1s ease-out 1s forwards;
+}
+
+.abrirProjetos i{
+    transition-duration: 0.7s;
+}
+
+.navProjetos:hover .abrirProjetos {
+    background-color: #00000F;
+    color: white;
+    transition-duration: 0.7s;
+    border-radius: 5px 5px 0 0;
+}
+
+.navProjetos:hover .abrirProjetos i {
+    transform: rotate(90deg);
+    transition-duration: 0.7s;
+}
+
+.navProjetos {
+    position: relative;
+    display: inline-block;
+}
+
+.listaProjetos {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding: 0;
+    width: 100%;
+
+}
+
+.listaProjetos li{
+    background-color: #222831;
+    list-style: none;
+    display: block;
+    padding: 3px 5px;
+ }
+
+ .listaProjetos li a{
+     display: block;
+     padding: 6px 7px;
+     color: #EEEEEE;
+     text-decoration: none;
+     transition-duration: 0.3s;
+}
+
+.listaProjetos li a:hover{
+    color: black;
+    background-color: white;
+
+    transition-duration: 1s;
+}
+
+.navProjetos:hover .listaProjetos {
+    opacity: 1;
+    visibility: visible;
+    transition-duration: 1.0s;
+
+}
+
+@keyframes slideUpFull {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp75 {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 0.75;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInCode {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) translateX(30px);
+    }
+    to {
+        opacity: 0.55;
+        transform: translateY(-50%) translateX(0);
+    }
 }
