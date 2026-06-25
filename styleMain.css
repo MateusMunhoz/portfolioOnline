@@ -294,9 +294,69 @@ a:visited {
     font-size: clamp(0.9rem, 0.8rem, 1.0rem);
 }
 
-.contato{
-    padding: 2rem 4rem;
-    border-bottom: 0.15rem solid #222831;
+.rodape {
+    background-color: #1a1f26;
+    color: #EEEEEE;
+    padding: 3rem 4rem 1.5rem;
+    border-top: 0.15rem solid #222831;
+    width: 100%;
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.rodape-info h3 {
+    font-size: 1.5rem;
+    color: #00ADB5;
+    margin-bottom: 0.5rem;
+}
+
+.rodape-info p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.rodape-contatos {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.rodape-contatos a,
+.rodape-contatos span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #393E46;
+    color: #EEEEEE;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.rodape-contatos a:hover,
+.rodape-contatos span:hover {
+    background-color: #00ADB5;
+    color: #222831;
+    transform: translateY(-3px);
+}
+
+.rodape-copyright {
+    border-top: 1px solid #393E46;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.7;
 }
 
 .aboutSections h2{
@@ -321,80 +381,6 @@ a:visited {
 
 }
 
-.contato {
-    display: block;
-
-}
-
-.contato h2{
-    margin-bottom: 1rem;
-
-}
-
-.listaContatos{
-    display: flex;
-    flex-direction: row;
-    gap: 1.8rem;
-}
-
-.listaContatos li{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    justify-content: left;
-    color: #EEEEEE;
-    opacity: 0.85;
-
-}
-
-
-.listaContatos li a{
-    text-decoration: none;
-    color: #EEEEEE;
-    transition-duration: 0.7s;
-    border-radius: 0.3rem;
-    padding: 0.5rem 0.8rem;
-    background-color: #00ADB5;
-
-}
-
-.listaContatos li span:hover {
-    color: #00ADB5;
-    transition-duration: 0.7s;
-    cursor: pointer;
-
-}
-
-.listaContatos li a:hover{
-    color: #EEEEEE;
-    background-color: #00000F;
-}
-
-.listaContatos li span{
-    border-radius: 0.3rem;
-    padding: 0.5rem 0.8rem;
-    background-color: #00ADB5;
-    transition-duration: 0.7s;
-}
-
-
-.listaContatos li span:hover{
-    color: #EEEEEE;
-    background-color: #00000F;
-}
-
-.listaContatos i.fa-linkedin{
-    color: #0A66C2;
-}
-
-.listaContatos i.fa-phone{
-    color: #EEEEEE;
-}
-
-.listaContatos .fa-envelope{
-    color: #EA4335;
-}
-
 .sobreCard {
     display: flex;
     align-items: center;
@@ -407,6 +393,8 @@ a:visited {
 .sobreCard:nth-child(2) { animation-delay: 0.2s; }
 .sobreCard:nth-child(3) { animation-delay: 0.4s; }
 .sobreCard:nth-child(4) { animation-delay: 0.6s; }
+
+
 
 .sobreMim p{
     line-height: 1.6;
