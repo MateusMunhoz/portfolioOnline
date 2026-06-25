@@ -348,9 +348,14 @@ a:visited {
     transition-duration: 0.7s;
 }
 
-.listaContatos li a:hover {
+.listaContatos li span:hover {
     color: #00ADB5;
     transition-duration: 0.7s;
+    cursor: pointer;
+}
+
+.listaContatos li a:hover{
+    color: #00ADB5;
 }
 
 .listaContatos i.fa-linkedin{
