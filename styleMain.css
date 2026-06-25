@@ -290,6 +290,10 @@ a:visited {
     border-bottom: 0.15rem solid #222831;
 }
 
+.formacao p{
+    font-size: clamp(0.9rem, 0.8rem, 1.0rem);
+}
+
 .contato{
     padding: 2rem 4rem;
     border-bottom: 0.15rem solid #222831;
@@ -389,6 +393,12 @@ a:visited {
 
 .listaContatos .fa-envelope{
     color: #EA4335;
+}
+
+.sobreMim p{
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 0.8rem, 1.0rem);
+    color: #EEEEEE;
 }
 
 @keyframes slideUpFull {
