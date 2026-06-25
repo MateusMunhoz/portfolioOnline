@@ -335,12 +335,35 @@ a:visited {
 .listaContatos li{
     list-style: none;
     justify-content: left;
-    padding-left: 1rem;
+    padding: 1.5rem 1.5rem 0 0;
     color: #EEEEEE;
     opacity: 0.85;
 
 }
 
+
+.listaContatos li a{
+    text-decoration: none;
+    color: #EEEEEE;
+    transition-duration: 0.7s;
+}
+
+.listaContatos li a:hover {
+    color: #00ADB5;
+    transition-duration: 0.7s;
+}
+
+.listaContatos i.fa-linkedin{
+    color: #0A66C2;
+}
+
+.listaContatos i.fa-phone{
+    color: #34A853;
+}
+
+.listaContatos .fa-envelope{
+    color: #EA4335;
+}
 
 @keyframes slideUpFull {
     from {
