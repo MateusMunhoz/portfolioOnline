@@ -10,17 +10,20 @@
     display: flex;
     margin: 0;
     padding: 0;
+    background-color: #393E46;
 
 }
 
 .titleNav {
     margin: 0;
     padding: 0;
+    
 }
 
 .bodyNav {
     margin: 0;
     padding: 0;
+
 }
 
 .navBarHor {
@@ -30,8 +33,9 @@
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    border: black solid 1px;
     background-color: #00ADB5;
+    border-radius: 0 0 1rem 1rem;
+    overflow: hidden;
 
 }
 
@@ -56,15 +60,16 @@ a:visited {
     transition-duration: 0.5s;
 }
 
+
 .navBarHor li {
     float: left;
     width: 33.33%;
     text-align: center;
+
 }
 
-.navBarHor li:nth-child(2) {
-    border-left: black solid 1px;
-    border-right: black solid 1px;
+.navBarHor li:nth-child(1) {
+    border-radius: 0 0 0 5rem ;
 }
 
 .conteudo {
@@ -287,7 +292,6 @@ a:visited {
 
 .formacao{
     padding: 2rem 4rem;
-    border-bottom: 0.15rem solid #222831;
 }
 
 .formacao p{
