@@ -395,10 +395,52 @@ a:visited {
     color: #EA4335;
 }
 
+.sobreCard {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.sobreCard:nth-child(2) { animation-delay: 0.2s; }
+.sobreCard:nth-child(3) { animation-delay: 0.4s; }
+.sobreCard:nth-child(4) { animation-delay: 0.6s; }
+
 .sobreMim p{
     line-height: 1.6;
     font-size: clamp(0.9rem, 0.8rem, 1.0rem);
     color: #EEEEEE;
+    background-color: #4A5059;
+    border-left: 4px solid #00ADB5;
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+    text-indent: 2rem;
+    flex: 1;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.sobreIcone {
+    font-size: 3rem;
+    color: #00ADB5;
+    opacity: 0.9;
+}
+
+.sobreCard:nth-child(4) .sobreIcone{
+    margin-left: 10px;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes slideUpFull {
