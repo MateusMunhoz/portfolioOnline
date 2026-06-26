@@ -5,6 +5,10 @@
     font-family: 'JetBrains Mono', monospace;
 }
 
+body {
+    background-color: #1a1f26;
+}
+
 .navMenu {
     border: none;
     display: flex;
@@ -32,11 +36,10 @@
     padding: 0;
     display: flex;
     justify-content: space-between;
-    width: 100vw;
-    background-color: #00ADB5;
+    width: 100%;
+    background-color: #1a1f26;
     border-radius: 0 0 1rem 1rem;
     overflow: hidden;
-
 }
 
 .navBarHor li a {
@@ -45,9 +48,15 @@
     text-decoration: none;
     transition-duration: 0.5s;
     font-size: clamp(0.8rem, 1.0rem, 1.2rem);;
-    color: #222831;
+    color: #00adb5;
     line-height: 1;
+    border-radius: inherit;
 
+}
+
+.sobreIcone:hover{
+    transition-duration: 0.5s;
+    color: rgb(175 176 178 / 1);
 }
 
 a:visited {
@@ -66,11 +75,9 @@ a:visited {
     width: 33.33%;
     text-align: center;
 
+
 }
 
-.navBarHor li:nth-child(1) {
-    border-radius: 0 0 0 5rem ;
-}
 
 .conteudo {
     display: flex;
@@ -418,6 +425,7 @@ a:visited {
     font-size: 3rem;
     color: #00ADB5;
     opacity: 0.9;
+    transition-duration: 0.5s;
 }
 
 .sobreCard:nth-child(4) .sobreIcone{
