@@ -1,3 +1,4 @@
+/* ========== RESET / GLOBAL ========== */
 * {
     padding: 0;
     margin: 0;
@@ -9,6 +10,25 @@ body {
     background-color: #1a1f26;
 }
 
+a:visited {
+    color: #222831;
+}
+
+
+/* ========== PAGE BODY ========== */
+.aboutBody{
+    overflow: scroll;
+}
+
+.pageBody {
+    background-color: #222831;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* ========== NAVBAR (HEADER) ========== */
 .navMenu {
     border: none;
     display: flex;
@@ -42,6 +62,14 @@ body {
     overflow: hidden;
 }
 
+.navBarHor li {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+
+
+}
+
 .navBarHor li a {
     padding: 25px 15px;
     display: block;
@@ -54,15 +82,6 @@ body {
 
 }
 
-.sobreIcone:hover{
-    transition-duration: 0.5s;
-    color: rgb(175 176 178 / 1);
-}
-
-a:visited {
-    color: #222831;
-}
-
 .navBarHor li a:hover {
     color: white;
     background-color: black;
@@ -70,15 +89,7 @@ a:visited {
 }
 
 
-.navBarHor li {
-    float: left;
-    width: 33.33%;
-    text-align: center;
-
-
-}
-
-
+/* ========== HOME PAGE ========== */
 .conteudo {
     display: flex;
     background-color: #393E46;
@@ -116,11 +127,24 @@ a:visited {
     animation: slideUp75 0.8s ease-out 0.6s forwards;
 }
 
-.pageBody {
-    background-color: #222831;
+.welcome {
+    color: #00ADB5;
+    font-size: clamp(0.7rem, 1.3vw, 1.2rem);
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    align-items: center;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    opacity: 0;
+    animation: slideUpFull 0.8s ease-out 0.2s forwards;
+}
+
+.welcome::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 1px;
+    background-color: #00ADB5;
+    margin-right: 0.5rem;
 }
 
 .btnGithub {
@@ -158,26 +182,14 @@ a:visited {
     animation: fadeInCode 1s ease-out 1.2s forwards;
 }
 
-.welcome {
-    color: #00ADB5;
-    font-size: clamp(0.7rem, 1.3vw, 1.2rem);
-    display: flex;
-    align-items: center;
-    line-height: 1;
-    margin-bottom: 0.75rem;
-    opacity: 0;
-    animation: slideUpFull 0.8s ease-out 0.2s forwards;
+.skills{
+    position: relative;
+    background-color: #EEEEEE;
+
 }
 
-.welcome::before {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 1px;
-    background-color: #00ADB5;
-    margin-right: 0.5rem;
-}
 
+/* ========== PROJECTS DROPDOWN ========== */
 .abrirProjetos{
     display: inline-flex;
     align-items: center;
@@ -197,6 +209,11 @@ a:visited {
     transition-duration: 0.7s;
 }
 
+.navProjetos {
+    position: relative;
+    display: inline-block;
+}
+
 .navProjetos:hover .abrirProjetos {
     background-color: #00000F;
     color: white;
@@ -207,11 +224,6 @@ a:visited {
 .navProjetos:hover .abrirProjetos i {
     transform: rotate(90deg);
     transition-duration: 0.7s;
-}
-
-.navProjetos {
-    position: relative;
-    display: inline-block;
 }
 
 .listaProjetos {
@@ -253,10 +265,32 @@ a:visited {
 
 }
 
-.skills{
-    position: relative;
-    background-color: #EEEEEE;
 
+/* ========== ABOUT PAGE - SECTIONS ========== */
+.aboutSections{
+    background-color: #393e46;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+}
+
+.aboutSections h2{
+    font-size: clamp(0.7rem, 1.3vw, 1.2rem);
+    display: flex;
+    line-height: 1;
+    align-items: center;
+    color: #00ADB5;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.aboutSections h2::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 25px;
+    background-color: #00ADB5;
 }
 
 .quemSou {
@@ -269,16 +303,6 @@ a:visited {
     margin-bottom: 0.75rem;
 }
 
-
-
-.aboutSections{
-    background-color: #393e46;
-    display: flex;
-    flex-flow: column wrap;
-    height: 100vh;
-    width: 100%;
-}
-
 .perfil {
     display: flex;
     flex-direction: row;
@@ -287,11 +311,62 @@ a:visited {
     border-bottom: 0.15rem solid #222831;
 }
 
+.profileInfo p{
+
+}
+
+
+/* ========== ABOUT PAGE - SOBRE MIM ========== */
 .sobreMim{
     padding: 2rem 4rem;
     border-bottom: 0.15rem solid #222831;
 }
 
+.sobreCard {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.sobreCard:nth-child(2) { animation-delay: 0.2s; }
+.sobreCard:nth-child(3) { animation-delay: 0.4s; }
+.sobreCard:nth-child(4) { animation-delay: 0.6s; }
+
+.sobreMim p{
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 0.8rem, 1.0rem);
+    color: #EEEEEE;
+    background-color: #4A5059;
+    border-left: 4px solid #00ADB5;
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+    text-indent: 2rem;
+    flex: 1;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.sobreIcone {
+    font-size: 3rem;
+    color: #00ADB5;
+    opacity: 0.9;
+    transition-duration: 0.5s;
+}
+
+.sobreIcone:hover{
+    transition-duration: 0.5s;
+    color: rgb(175 176 178 / 1);
+}
+
+.sobreCard:nth-child(4) .sobreIcone{
+    margin-left: 10px;
+}
+
+
+/* ========== ABOUT PAGE - SKILLS / FORMAÇÃO ========== */
 .skillsAbout{
     padding: 2rem 4rem;
     border-bottom: 0.15rem solid #222831;
@@ -305,6 +380,22 @@ a:visited {
     font-size: clamp(0.9rem, 0.8rem, 1.0rem);
 }
 
+.cardTechs{
+    background-color: #4A5059;
+    min-height: 300px;
+    max-width: 800px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 1rem 1rem 1rem 1rem;
+    border-left: 4px solid #00adb5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    gap: 1rem;
+}
+
+
+/* ========== FOOTER ========== */
 .rodape {
     background-color: #1a1f26;
     color: #EEEEEE;
@@ -370,68 +461,8 @@ a:visited {
     opacity: 0.7;
 }
 
-.aboutSections h2{
-    font-size: clamp(0.7rem, 1.3vw, 1.2rem);
-    display: flex;
-    line-height: 1;
-    align-items: center;
-    color: #00ADB5;
-    gap: 1rem;
-    margin-bottom: 0.75rem;
-}
 
-.aboutSections h2::before {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 25px;
-    background-color: #00ADB5;
-}
-
-.profileInfo p{
-
-}
-
-.sobreCard {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
-    opacity: 0;
-    animation: slideInLeft 0.8s ease-out forwards;
-}
-
-.sobreCard:nth-child(2) { animation-delay: 0.2s; }
-.sobreCard:nth-child(3) { animation-delay: 0.4s; }
-.sobreCard:nth-child(4) { animation-delay: 0.6s; }
-
-
-
-.sobreMim p{
-    line-height: 1.6;
-    font-size: clamp(0.9rem, 0.8rem, 1.0rem);
-    color: #EEEEEE;
-    background-color: #4A5059;
-    border-left: 4px solid #00ADB5;
-    border-radius: 8px;
-    padding: 0.9rem 1.1rem;
-    text-indent: 2rem;
-    flex: 1;
-    max-width: 800px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.sobreIcone {
-    font-size: 3rem;
-    color: #00ADB5;
-    opacity: 0.9;
-    transition-duration: 0.5s;
-}
-
-.sobreCard:nth-child(4) .sobreIcone{
-    margin-left: 10px;
-}
-
+/* ========== KEYFRAMES ========== */
 @keyframes slideInLeft {
     from {
         opacity: 0;
