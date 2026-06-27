@@ -384,14 +384,38 @@ a:visited {
     background-color: #4A5059;
     min-height: 300px;
     max-width: 800px;
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-radius: 1rem 1rem 1rem 1rem;
-    border-left: 4px solid #00adb5;
+    border-left: 4px solid #00ADB5;
+    border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     padding: 2rem;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.cardTechs i {
+    font-size: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.cardTechs .devicon-linux-plain {
+    color: #EEEEEE;
+}
+
+.cardTechs i:hover {
+    transform: scale(1.2);
+}
+
+.cardTechs .linuxCx{
+    width: 3rem;
+    height: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.cardTechs .linuxCx:hover {
+    transform: scale(1.2);
 }
 
 
