@@ -58,7 +58,7 @@ a:visited {
     justify-content: space-between;
     width: 100%;
     background-color: #1a1f26;
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 1.2rem  1.2rem 1.2rem 1.2rem;
     overflow: hidden;
 }
 
@@ -66,8 +66,6 @@ a:visited {
     float: left;
     width: 33.33%;
     text-align: center;
-
-
 }
 
 .navBarHor li a {
@@ -219,6 +217,29 @@ a:visited {
     color: white;
     transition-duration: 0.7s;
     border-radius: 5px 5px 0 0;
+}
+
+.sobreProjetos{
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.65rem 0.75rem;
+    border-radius: 5px;
+    background-color: #00ADB5;
+    color: #222831;
+    text-decoration: none;
+    transition-duration: 0.9s;
+
+    opacity: 0;
+    animation: slideUpFull 1.2s ease-out 1.2s forwards;
+}
+
+.sobreProjetos:hover{
+    background-color: #00000F;
+    color: white;
+    transition-duration: 0.7s;
+    border-radius: 5px 5px 5px 5px;
+
 }
 
 .navProjetos:hover .abrirProjetos i {
@@ -390,7 +411,7 @@ a:visited {
     padding: 2rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    gap: 1.2rem;
     align-items: center;
     justify-items: center;
 }
@@ -398,20 +419,39 @@ a:visited {
 .cardTechs i {
     font-size: 3rem;
     transition: transform 0.3s ease;
+    opacity: 0;
+    animation: slideInLeft 0.5s ease-out forwards;
 }
 
 .cardTechs .devicon-linux-plain {
     color: #EEEEEE;
 }
 
+.cardTechs :nth-child(1) { animation-delay: 0.1s; }
+.cardTechs :nth-child(2) { animation-delay: 0.2s; }
+.cardTechs :nth-child(3) { animation-delay: 0.3s; }
+.cardTechs :nth-child(4) { animation-delay: 0.4s; }
+.cardTechs :nth-child(5) { animation-delay: 0.5s; }
+.cardTechs :nth-child(6) { animation-delay: 0.6s; }
+.cardTechs :nth-child(7) { animation-delay: 0.7s; }
+.cardTechs :nth-child(8) { animation-delay: 0.8s; }
+.cardTechs :nth-child(9) { animation-delay: 0.9s; }
+.cardTechs :nth-child(10) { animation-delay: 1.0s; }
+
 .cardTechs i:hover {
     transform: scale(1.2);
+
 }
 
 .cardTechs .linuxCx{
     width: 3rem;
     height: 3rem;
     transition: transform 0.3s ease;
+    opacity: 0;
+    animation-name: slideInLeft;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
 
 .cardTechs .linuxCx:hover {
@@ -484,6 +524,8 @@ a:visited {
     font-size: 0.85rem;
     opacity: 0.7;
 }
+
+
 
 
 /* ========== KEYFRAMES ========== */
