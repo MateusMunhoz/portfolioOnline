@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="styleMain.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styleMain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <title>Sobre | Mateus Munhoz</title>
 </head>
 
 <body class="aboutBody">
+    <canvas class="bgParticles" id="bgParticles"></canvas>
     <header>
         <div class="navMenu">
             <ul class="navBarHor">
@@ -21,16 +23,50 @@
     <div class="aboutSections">
         <div class="perfil">
             <h2 class="quemSou">Perfil</h2>
-            <div class="profileContainer">
-                <div class="profileRow">
-                    <span class="profilePicContainer"><img src="./imagens/teste.jpg" alt="prof" class="profilePic"></span>
-                    <div class="profileInfo">
-                        <h3>Mateus Munhoz Guimarães</h3>
-                        <h4>Desenvolvedor de software</h4>
+            <div class="section-grid">
+                <div class="profileContainer">
+                    <div class="profileRow">
+                        <span class="profilePicContainer"><img src="./imagens/teste.jpg" alt="prof" class="profilePic"></span>
+                        <div class="profileInfo">
+                            <h3>Mateus Munhoz Guimarães</h3>
+                            <h4>Desenvolvedor de software</h4>
+                        </div>
+                    </div>
+                    <h5 class="location"><i class="fa-solid fa-location-dot"></i>São Paulo, SP</h5>
+                    <p>Em busca de uma oportunidade de estágio para aplicar e expandir meus conhecimentos em desenvolvimento de software.</p>
+                    <div class="rodapeProfile">
+                        <h5 class="status">Status: <span> Disponível </span></h5>
+                        <div class="contatoBox">
+                            <h5 class="contato">Contato:</h5>
+                            <a href="https://www.linkedin.com/in/mateus-munhoz-guimar%C3%A3es-606436278/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <span id="emailDy">mateusimunhoz@hotmail.com</span>
+                        </div>
                     </div>
                 </div>
-                <h5 class="location"><i class="fa-solid fa-location-dot"></i>São Paulo, SP</h5>
-                <h5 class="status">Status: <span> Disponível </span></h5>
+                <div class="decorCard perfilDecor">
+                    <div class="decorCard-header">
+                        <i class="fa-solid fa-terminal"></i>
+                        <span>dev.card</span>
+                    </div>
+                    <div class="decorCard-body">
+                        <div class="devStat">
+                            <span class="devStat-label">Nível</span>
+                            <span class="devStat-value">Dev em formação</span>
+                        </div>
+                        <div class="devStat">
+                            <span class="devStat-label">Stack</span>
+                            <span class="devStat-value">HTML · CSS · JS · C · C# · C++ · Python </span>
+                        </div>
+                        <div class="devStat">
+                            <span class="devStat-label">Local</span>
+                            <span class="devStat-value">São Paulo, Brasil</span>
+                        </div>
+                        <div class="devStat">
+                            <span class="devStat-label">Status</span>
+                            <span class="devStat-value available">Disponível<span class="cursor-underline"></span></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="sobreMim">
