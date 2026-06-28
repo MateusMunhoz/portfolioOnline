@@ -326,15 +326,70 @@ a:visited {
 
 .perfil {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 2rem 4rem;
-    justify-content: space-between;
     border-bottom: 0.15rem solid #222831;
 }
 
-.profileInfo p{
+.profileContainer{
+    background-color: #4a5059;
+    display: flex;
+    flex-direction: row;
+    min-height: 300px;
+    max-width: 800px;
+    border-radius: 8px;
+    border-left: 4px solid #00ADB5;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    align-items: flex-start;
 
 }
+
+.profileContainer h3{
+    line-height: 1rem;
+    color: #00ADB5;
+    margin-left: 0.4rem;
+
+}
+
+.profileContainer h4{
+    line-height: 1rem;
+    color: #d5d5d5;
+    margin-left: 0.8rem;
+    margin-top: 2px;
+}
+
+
+
+.profileRow{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profilePic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.profilePicContainer{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    border-left: 3px solid #00ADB5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
 
 
 /* ========== ABOUT PAGE - SOBRE MIM ========== */
@@ -415,16 +470,10 @@ a:visited {
     align-items: center;
     justify-items: center;
 }
-
-.cardTechs i {
-    font-size: 3rem;
-    transition: transform 0.3s ease;
+.techAnimate {
+    display: inline-flex;
     opacity: 0;
     animation: slideInLeft 0.5s ease-out forwards;
-}
-
-.cardTechs .devicon-linux-plain {
-    color: #EEEEEE;
 }
 
 .cardTechs :nth-child(1) { animation-delay: 0.1s; }
@@ -438,26 +487,24 @@ a:visited {
 .cardTechs :nth-child(9) { animation-delay: 0.9s; }
 .cardTechs :nth-child(10) { animation-delay: 1.0s; }
 
-.cardTechs i:hover {
-    transform: scale(1.2);
-
+.cardTechs i {
+    font-size: 3rem;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .cardTechs .linuxCx{
     width: 3rem;
     height: 3rem;
-    transition: transform 0.3s ease;
-    opacity: 0;
-    animation-name: slideInLeft;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cardTechs i:hover {
+    transform: scale(1.25);
 }
 
 .cardTechs .linuxCx:hover {
-    transform: scale(1.2);
+    transform: scale(1.25);
 }
-
 
 /* ========== FOOTER ========== */
 .rodape {
