@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styleMain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <title>Sobre | Mateus Munhoz</title>
+</head>
+
+<body class="aboutBody">
+    <canvas class="bgParticles" id="bgParticles"></canvas>
+    <header>
+        <div class="navMenu">
+            <ul class="navBarHor">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="aboutSections">
+        <div class="perfil">
+            <h2 class="quemSou">Perfil</h2>
+            <div class="section-grid">
+                <div class="profileContainer">
+                    <div class="profileRow">
+                        <span class="profilePicContainer"><img src="./imagens/teste.jpg" alt="prof" class="profilePic"></span>
+                        <div class="profileInfo">
+                            <h3>Mateus Munhoz Guimarães</h3>
+                            <h4>Desenvolvedor de software</h4>
+                        </div>
+                    </div>
+                    <h5 class="location"><i class="fa-solid fa-location-dot"></i>São Paulo, SP</h5>
+                    <p id="typewriterBio"></p>
+                    <div class="rodapeProfile">
+                        <h5 class="status">Status: <span> Disponível </span></h5>
+                        <div class="contatoBox">
+                            <h5 class="contato">Contato:</h5>
+                            <a href="https://www.linkedin.com/in/mateus-munhoz-guimar%C3%A3es-606436278/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <span id="emailDy">mateusimunhoz@hotmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="decorCard perfilDecor">
+                    <div class="decorCard-header">
+                        <i class="fa-solid fa-terminal"></i>
+                        <span>dev.card</span>
+                    </div>
+                    <div class="decorCard-body">
+                        <div class="devStat">
+                            <span class="devStat-label">Nível</span>
+                            <span class="devStat-value">Dev em formação</span>
+                        </div>
+                        <div class="devStat">
+                            <span class="devStat-label">Stack</span>
+                            <span class="devStat-value">HTML · CSS · JS · C · C# · C++ · Python </span>
+                        </div>
+                        <div class="devStat">
+                            <span class="devStat-label">Local</span>
+                            <span class="devStat-value">São Paulo, Brasil</span>
+                        </div>
+                        <div class="devStat">
+                            <span class="devStat-label">Status</span>
+                            <span class="devStat-value available">Disponível<span class="cursor-underline"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sobreMim">
+            <h2>Sobre mim</h2>
+            <div class="sobreCard">
+                <p>Sou um desenvolvedor em formação com foco em criar soluções simples e funcionais. Gosto de transformar ideias em código, aprender coisas novas e aprimorar cada projeto que eu coloco a mão.</p>
+                <i class="fa-solid fa-code sobreIcone"></i>
+            </div>
+            <div class="sobreCard">
+                <p>Atualmente estudo e pratico HTML, CSS, JavaScript, C, C# e C++, construindo projetos próprios para ganhar experiência. Valorizo muito a organização, a clareza no código e a vontade de sempre fazer melhor do que ontem.</p>
+                <i class="fa-solid fa-laptop-code sobreIcone"></i>
+            </div>
+            <div class="sobreCard">
+                <p>Fora do código, gosto de acompanhar novidades de tecnologia e estudar formas de melhorar minhas entregas. Acredito que essa curiosidade me ajuda a evoluir tanto tecnicamente quanto na forma de resolver problemas.</p>
+                <i class="fa-solid fa-lightbulb sobreIcone"></i>
+            </div>
+        </div>
+        <div class="skillsAbout">
+            <h2>Skills</h2>
+            <div class="cardTechs">
+                <span class="techAnimate"><i class="devicon-html5-plain colored" title="HTML5"></i></span>
+                <span class="techAnimate"><i class="devicon-css3-plain colored" title="CSS3"></i></span>
+                <span class="techAnimate"><i class="devicon-javascript-plain colored" title="JavaScript"></i></span>
+                <span class="techAnimate"><i class="devicon-c-original colored" title="C"></i></span>
+                <span class="techAnimate"><i class="devicon-csharp-plain colored" title="C#"></i></span>
+                <span class="techAnimate"><i class="devicon-cplusplus-plain colored" title="C++"></i></span>
+                <span class="techAnimate"><i class="devicon-azuresqldatabase-plain colored" title="SQL"></i></span>
+                <span class="techAnimate"><i class="devicon-git-plain colored" title="Git"></i></span>
+                <span class="techAnimate"><i class="devicon-python-plain colored" title="Python"></i></span>
+                <span class="techAnimate"><img alt="Linux" title="Linux" class ="linuxCx" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" /></span>
+            </div>
+        </div>
+        <div class="formacao">
+            <h2>Formação</h2>
+            <div class="formacaoCard">
+                <p>Ensino Médio - completo </p>
+                <p>Ensino Superior - Ciência da computação - Cursando - 5/8 semestres completos </p>
+                <p>Ensino Superior - Análise e Desenvolvimento de Sistemas</p>
+                <p>Ensino Superior - Análise e Desenvolvimento de Sistemas</p>
+                <p>Ensino Superior - Análise e Desenvolvimento de Sistemas</p>
+                <span class="formacaoStatus">Em andamento</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <div class="rodape-info">
+                <h3>Mateus Munhoz</h3>
+                <p>Desenvolvedor em formação</p>
+            </div>
+            <div class="rodape-contatos">
+                <a href="mailto:mateusimunhoz@hotmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/mateus-munhoz-guimar%C3%A3es-606436278/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <span id="telefoneDy" aria-label="Telefone"><i class="fa-solid fa-phone"></i></span>
+            </div>
+        </div>
+        <div class="rodape-copyright">
+            <p>&copy; 2026 Mateus Munhoz. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+<script src="index.js"></script>
+</body>
+</html>
