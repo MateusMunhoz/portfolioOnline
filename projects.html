@@ -9,16 +9,68 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
-
+    <canvas class="bgParticles" id="bgParticles"></canvas>
+    <div class="pageBody">
     <header>
         <div class="navMenu">
             <ul class="navBarHor">
+                <li class="pageTitle"><a href="home.html"><span class="typeText">&lt;MMG /&gt;</span><span class="cursor">_</span></a></li>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </div>
     </header>
+
+    <main class="projectsContainer">
+        <section class="projectsSection">
+            <h2 class="projectsTitle">Meus Projetos</h2>
+            
+            <div class="projectsGrid">
+                <article class="projectCard">
+                    <div class="projectImage">
+                        <img src="./imagens_projetos/screencapture_demo.png" alt="Projeto 1">
+                    </div>
+                    <div class="projectContent">
+                        <h3 class="projectName">Screenshot Automation</h3>
+                        <p class="projectDescription">Projeto de captura de tela, usado especificamente para construcao de um dataset que sera usado para treinar uma IA que reconheça/diferencie os spawns de mapas do jogo Escape from Tarkov.</p>
+                        <div class="projectTags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pillow</span>
+                            <span class="tag">MSS</span>
+                            <span class="tag">Tkinter</span>
+                        </div>
+                        <div class="projectLinks">
+                            <a href="https://github.com/MateusMunhoz/Screen-Capture.git" target="_blank" class="projectLink"><i class="fa-brands fa-github"></i> Código</a>
+
+                        </div>
+                    </div>
+                </article>
+
+                <article class="projectCard">
+                    <div class="projectImage">
+                        <img src="./imagens_projetos/ams2_telemetry_demo.png" alt="Projeto 2">
+                    </div>
+                    <div class="projectContent">
+                        <h3 class="projectName">Automobilista2 Telemetry Overlay</h3>
+                        <p class="projectDescription">Overlay de telemetria para o jogo Automobilista 2, usando TKInter para fazer o overlay e coletando dados da memória compartilhada do jogo (shared memory), com endereços fixos. Projeto inspirado pelo aplicativo <a class="simhubLink" target="_blank" href="https://www.simhubdash.com/download-2/">SimHub</a> .</p>
+                        <div class="projectTags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyQT5</span>
+
+                        </div>
+                        <div class="projectLinks">
+                            <a href="#" class="projectLink"><i class="fa-brands fa-github"></i> Código</a>
+
+                        </div>
+                    </div>
+                </article>
+
+
+            </div>
+        </section>
+    </main>
+
     <footer class="rodape">
         <div class="rodape-conteudo">
             <div class="rodape-info">
@@ -35,5 +87,8 @@
             <p>&copy; 2026 Mateus Munhoz. Todos os direitos reservados.</p>
         </div>
     </footer>
+    </div>
+
+<script src="index.js"></script>
 </body>
 </html>
